@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fast Click</title>
+  <link rel="stylesheet" href="fastclick.css" />
+</head>
+<body>
+    <div class="admin-logo">
+  <img src="logo.jpg" alt="Logo" />
+  <span>THÂN NGÔ ĐẸP TRAI</span>
+</div>
+
+  <div class="container">
+    <h1>⚡ Fast Click</h1>
+
+    <div id="menu">
+      <button onclick="startSingle()">🎮 Chơi đơn</button>
+      <button onclick="createRoom()">🧑‍🤝‍🧑 Tạo phòng</button>
+      <button onclick="showJoinForm()">🔑 Vào phòng</button>
+    </div>
+
+    <div id="room-form" style="display:none;">
+      <input type="text" id="room-input" placeholder="Nhập mã phòng" />
+      <button onclick="joinRoom()">Vào</button>
+    </div>
+
+    <div id="room-code" class="room-info"></div>
+
+    <div id="game-area" class="game-area"></div>
+    <div id="score" class="status-text"></div>
+
+    <button onclick="goHome()">🏠 Quay về</button>
+  </div>
+
+  <script src="fastclick.js"></script>
+</body>
+</html>
