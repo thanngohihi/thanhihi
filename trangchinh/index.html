@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chọn Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="admin-logo">
+  <img src="logo.jpg" alt="Logo" />
+  <span>THÂN NGÔ ĐẸP TRAI</span>
+</div>
+  <h1>Chào <span>CONCAC</span>, chọn game mà chơi đê</h1>
+
+  <div class="game-list">
+    <div class="game-card">
+      <h2>🎴 Game Trí Nhớ</h2>
+      <button onclick="playSingle('memory')">Chơi</button>
+    </div>
+    <div class="game-card">
+      <h2>⭕❌ Cờ Caro</h2>
+      <button onclick="playSingle('caro')">Chơi</button>
+    </div>
+    <div class="game-card">
+      <h2>⚡ Đấu Tay Nhanh</h2>
+      <button onclick="playSingle('fastclick')">Chơi</button>
+    </div>
+  </div>
+
+  <!-- Modal chọn chế độ -->
+  <div id="multiplayer-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Chọn cách chơi đôi</h3>
+      <button onclick="createRoom()">Tạo phòng</button>
+      <button onclick="showJoinForm()">Vào phòng</button>
+      <button onclick="closeModal()">Hủy</button>
+    </div>
+  </div>
+
+  <!-- Modal nhập mã phòng -->
+  <div id="join-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Nhập mã phòng</h3>
+      <input id="room-code-input" type="text" placeholder="Ví dụ: concac" />
+      <br><br>
+      <button onclick="joinRoom()">Tham gia</button>
+      <button onclick="closeJoinModal()">Hủy</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
