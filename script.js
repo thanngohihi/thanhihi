@@ -4,7 +4,7 @@ document.getElementById('player-name').textContent = playerName;
 let selectedGame = '';
 
 function playSingle(game) {
-  window.location.href = `/games/${game}.html`;
+  window.location.href = `/trangchinh/${game}.html`;
 }
 
 function playMultiplayer(game) {
@@ -27,13 +27,13 @@ function closeJoinModal() {
 
 function createRoom() {
   const roomCode = Math.random().toString(36).substring(2, 8);
-  window.location.href = `/games/${selectedGame}.html?room=${roomCode}&host=true`;
+  window.location.href = `/trangchinh/${selectedGame}.html?room=${roomCode}&host=true`;
 }
 
 function joinRoom() {
   const roomCode = document.getElementById('room-code-input').value.trim();
   if (roomCode) {
-    window.location.href = `/games/${selectedGame}.html?room=${roomCode}`;
+    window.location.href = `/trangchinh/${selectedGame}.html?room=${roomCode}`;
   } else {
     alert("Vui lòng nhập mã phòng!");
   }
